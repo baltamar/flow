@@ -1,0 +1,19 @@
+{
+  "name": "FLOW — إدارة الطلبات",
+  "short_name": "FLOW",
+  "description": "منصة إدارة طلبات عالية الأداء",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#10b981",
+  "dir": "rtl",
+  "lang": "ar",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

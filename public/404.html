@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <title>FLOW</title>
+    <script>
+      // GitHub Pages SPA fallback: any unknown route gets redirected to index.html
+      // which then renders the matching React route client-side.
+      // The path is preserved in the query string so React Router can pick it up.
+      var path = window.location.pathname;
+      var repoName = 'flow';
+      // Strip the repo prefix if the site is hosted under /<repo>/
+      if (path.indexOf('/' + repoName + '/') === 0) {
+        path = path.slice(repoName.length + 1);
+      }
+      window.location.replace(
+        window.location.origin + '/flow/' + path.replace(/^\//, '') + window.location.search + window.location.hash,
+      );
+    </script>
+  </head>
+  <body>
+    <p>Loading…</p>
+  </body>
+</html>

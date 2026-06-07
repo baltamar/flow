@@ -1,0 +1,178 @@
+{
+  "app": {
+    "name": "FLOW",
+    "tagline": "إدارة طلبات عالية الأداء"
+  },
+  "nav": {
+    "kanban": "كانبان",
+    "list": "القائمة الرئيسية",
+    "analytics": "التحليلات",
+    "archive": "الأرشيف",
+    "settings": "الإعدادات"
+  },
+  "auth": {
+    "loginTitle": "تسجيل الدخول إلى FLOW",
+    "loginSubtitle": "أدخل بريدك الإلكتروني لتلقي رابط تسجيل الدخول السحري",
+    "emailLabel": "البريد الإلكتروني",
+    "emailPlaceholder": "name@company.ly",
+    "sendMagicLink": "إرسال رابط سحري",
+    "continueWithGoogle": "متابعة باستخدام Google",
+    "or": "أو",
+    "magicLinkSent": "تم إرسال الرابط السحري إلى {{email}}",
+    "verifyNotice": "يرجى التحقق من بريدك للمتابعة",
+    "profile": "الملف الشخصي",
+    "signOut": "تسجيل الخروج",
+    "greeting": "مرحبًا، {{name}}"
+  },
+  "common": {
+    "search": "بحث",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "delete": "حذف",
+    "edit": "تعديل",
+    "create": "إنشاء",
+    "back": "رجوع",
+    "loading": "جاري التحميل...",
+    "noData": "لا توجد بيانات",
+    "actions": "إجراءات",
+    "confirm": "تأكيد",
+    "yes": "نعم",
+    "no": "لا",
+    "close": "إغلاق",
+    "newOrder": "طلب جديد",
+    "quickCreate": "إنشاء طلب سريع",
+    "archive": "أرشفة",
+    "restore": "استعادة",
+    "export": "تصدير",
+    "success": "تم بنجاح",
+    "error": "حدث خطأ"
+  },
+  "kanban": {
+    "title": "لوحة كانبان",
+    "subtitle": "إدارة تدفق الطلبات",
+    "columns": {
+      "new": "جديد",
+      "preparing": "قيد التحضير",
+      "shipped": "تم الشحن",
+      "delivered": "تم التسليم"
+    }
+  },
+  "list": {
+    "title": "القائمة الرئيسية",
+    "subtitle": "كل الطلبات في مكان واحد",
+    "code": "الرمز",
+    "customer": "العميل",
+    "phone": "الهاتف",
+    "city": "المدينة",
+    "status": "الحالة",
+    "priority": "الأولوية",
+    "total": "الإجمالي",
+    "itemsCount": "عدد العناصر",
+    "createdAt": "تاريخ الإنشاء",
+    "actions": "إجراءات",
+    "selectAll": "تحديد الكل",
+    "selected": "{{count}} محدد",
+    "bulk": {
+      "markShipped": "تحديد كمشحون",
+      "archive": "أرشفة",
+      "exportXlsx": "تصدير Excel"
+    },
+    "filters": {
+      "status": "الحالة",
+      "priority": "الأولوية",
+      "city": "المدينة",
+      "dateFrom": "من تاريخ",
+      "dateTo": "إلى تاريخ"
+    },
+    "sort": {
+      "asc": "تصاعدي",
+      "desc": "تنازلي"
+    },
+    "exportSuccess": "تم تصدير {{count}} طلب إلى Excel"
+  },
+  "order": {
+    "code": "الرمز",
+    "customer": "العميل",
+    "phone": "الهاتف",
+    "city": "المدينة",
+    "status": "الحالة",
+    "priority": "الأولوية",
+    "total": "الإجمالي",
+    "items": "العناصر",
+    "notes": "ملاحظات",
+    "attachments": "المرفقات",
+    "createdAt": "تاريخ الإنشاء",
+    "updatedAt": "آخر تحديث",
+    "addItem": "إضافة عنصر",
+    "itemName": "اسم العنصر",
+    "qty": "الكمية",
+    "price": "السعر",
+    "save": "حفظ الطلب",
+    "saved": "تم حفظ الطلب",
+    "created": "تم إنشاء الطلب",
+    "whatsappMessage": "مرحبًا {{name}}،\n\nطلبك رقم {{code}} ({{status}}).\n\nالعناصر:\n{{items}}\n\nالإجمالي: {{total}}\n\nشكرًا لتعاملكم معنا.",
+    "whatsappTooltip": "إرسال تحديث عبر واتساب"
+  },
+  "status": {
+    "new": "جديد",
+    "preparing": "قيد التحضير",
+    "shipped": "تم الشحن",
+    "delivered": "تم التسليم"
+  },
+  "priority": {
+    "low": "منخفض",
+    "normal": "عادي",
+    "high": "مرتفع",
+    "urgent": "عاجل"
+  },
+  "analytics": {
+    "title": "التحليلات",
+    "subtitle": "نظرة عامة على الأداء",
+    "totalOrders": "إجمالي الطلبات",
+    "totalRevenue": "إجمالي الإيرادات",
+    "avgOrder": "متوسط قيمة الطلب",
+    "deliveredPct": "نسبة التسليم",
+    "byStatus": "حسب الحالة",
+    "byCity": "حسب المدينة",
+    "revenueByDay": "الإيرادات اليومية (آخر 30 يوم)",
+    "topProducts": "أفضل 10 منتجات"
+  },
+  "archive": {
+    "title": "الأرشيف",
+    "subtitle": "الطلبات المؤرشفة",
+    "empty": "لا توجد طلبات مؤرشفة",
+    "restore": "استعادة",
+    "archivedAt": "تاريخ الأرشفة"
+  },
+  "toast": {
+    "newOrderCreated": "تم إنشاء طلب جديد: {{code}}"
+  },
+  "notifications": {
+    "title": "الإشعارات",
+    "empty": "لا توجد إشعارات",
+    "enable": "تفعيل إشعارات المتصفح",
+    "disable": "إيقاف إشعارات المتصفح",
+    "permissionGranted": "تم تفعيل إشعارات المتصفح",
+    "permissionDenied": "تم رفض إذن الإشعارات",
+    "newOrderTitle": "طلب جديد من FLOW",
+    "newOrderBody": "{{code}} · {{name}} · {{total}}"
+  },
+  "settings": {
+    "title": "الإعدادات",
+    "subtitle": "إعدادات النظام والمنطقة",
+    "region": "المنطقة",
+    "currency": "العملة",
+    "locale": "اللغة المحلية",
+    "language": "لغة الواجهة",
+    "theme": "المظهر",
+    "themeLight": "فاتح",
+    "themeDark": "داكن",
+    "saveSuccess": "تم حفظ الإعدادات"
+  },
+  "errors": {
+    "notFound": "الصفحة غير موجودة",
+    "notFoundSubtitle": "لم نعثر على ما تبحث عنه",
+    "goHome": "العودة إلى الرئيسية",
+    "forbidden": "يجب تسجيل الدخول للمتابعة"
+  }
+}

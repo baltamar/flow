@@ -1,0 +1,178 @@
+{
+  "app": {
+    "name": "FLOW",
+    "tagline": "Hochleistungs-Bestellverwaltung"
+  },
+  "nav": {
+    "kanban": "Kanban",
+    "list": "Stammdaten",
+    "analytics": "Analytik",
+    "archive": "Archiv",
+    "settings": "Einstellungen"
+  },
+  "auth": {
+    "loginTitle": "Bei FLOW anmelden",
+    "loginSubtitle": "Geben Sie Ihre E-Mail-Adresse ein, um einen Magic-Link zu erhalten",
+    "emailLabel": "E-Mail-Adresse",
+    "emailPlaceholder": "name@firma.de",
+    "sendMagicLink": "Magic-Link senden",
+    "continueWithGoogle": "Mit Google fortfahren",
+    "or": "oder",
+    "magicLinkSent": "Magic-Link wurde an {{email}} gesendet",
+    "verifyNotice": "Bitte überprüfen Sie Ihre E-Mail, um fortzufahren",
+    "profile": "Profil",
+    "signOut": "Abmelden",
+    "greeting": "Willkommen, {{name}}"
+  },
+  "common": {
+    "search": "Suchen",
+    "save": "Speichern",
+    "cancel": "Abbrechen",
+    "delete": "Löschen",
+    "edit": "Bearbeiten",
+    "create": "Erstellen",
+    "back": "Zurück",
+    "loading": "Wird geladen...",
+    "noData": "Keine Daten",
+    "actions": "Aktionen",
+    "confirm": "Bestätigen",
+    "yes": "Ja",
+    "no": "Nein",
+    "close": "Schließen",
+    "newOrder": "Neue Bestellung",
+    "quickCreate": "Schnell erstellen",
+    "archive": "Archivieren",
+    "restore": "Wiederherstellen",
+    "export": "Exportieren",
+    "success": "Erfolgreich",
+    "error": "Fehler aufgetreten"
+  },
+  "kanban": {
+    "title": "Kanban-Board",
+    "subtitle": "Bestellfluss verwalten",
+    "columns": {
+      "new": "Neu",
+      "preparing": "In Vorbereitung",
+      "shipped": "Versendet",
+      "delivered": "Zugestellt"
+    }
+  },
+  "list": {
+    "title": "Stammdatenliste",
+    "subtitle": "Alle Bestellungen an einem Ort",
+    "code": "Code",
+    "customer": "Kunde",
+    "phone": "Telefon",
+    "city": "Stadt",
+    "status": "Status",
+    "priority": "Priorität",
+    "total": "Gesamt",
+    "itemsCount": "Artikel",
+    "createdAt": "Erstellt am",
+    "actions": "Aktionen",
+    "selectAll": "Alle auswählen",
+    "selected": "{{count}} ausgewählt",
+    "bulk": {
+      "markShipped": "Als versendet markieren",
+      "archive": "Archivieren",
+      "exportXlsx": "Excel exportieren"
+    },
+    "filters": {
+      "status": "Status",
+      "priority": "Priorität",
+      "city": "Stadt",
+      "dateFrom": "Von",
+      "dateTo": "Bis"
+    },
+    "sort": {
+      "asc": "Aufsteigend",
+      "desc": "Absteigend"
+    },
+    "exportSuccess": "{{count}} Bestellungen nach Excel exportiert"
+  },
+  "order": {
+    "code": "Code",
+    "customer": "Kunde",
+    "phone": "Telefon",
+    "city": "Stadt",
+    "status": "Status",
+    "priority": "Priorität",
+    "total": "Gesamt",
+    "items": "Artikel",
+    "notes": "Notizen",
+    "attachments": "Anhänge",
+    "createdAt": "Erstellt am",
+    "updatedAt": "Aktualisiert am",
+    "addItem": "Artikel hinzufügen",
+    "itemName": "Artikelname",
+    "qty": "Menge",
+    "price": "Preis",
+    "save": "Bestellung speichern",
+    "saved": "Bestellung gespeichert",
+    "created": "Bestellung erstellt",
+    "whatsappMessage": "Hallo {{name}},\n\nIhre Bestellung {{code}} ({{status}}).\n\nArtikel:\n{{items}}\n\nGesamt: {{total}}\n\nVielen Dank für Ihren Einkauf.",
+    "whatsappTooltip": "Update via WhatsApp senden"
+  },
+  "status": {
+    "new": "Neu",
+    "preparing": "In Vorbereitung",
+    "shipped": "Versendet",
+    "delivered": "Zugestellt"
+  },
+  "priority": {
+    "low": "Niedrig",
+    "normal": "Normal",
+    "high": "Hoch",
+    "urgent": "Dringend"
+  },
+  "analytics": {
+    "title": "Analytik",
+    "subtitle": "Leistungsübersicht",
+    "totalOrders": "Bestellungen gesamt",
+    "totalRevenue": "Gesamtumsatz",
+    "avgOrder": "Durchschnittlicher Bestellwert",
+    "deliveredPct": "Zustellquote",
+    "byStatus": "Nach Status",
+    "byCity": "Nach Stadt",
+    "revenueByDay": "Tagesumsatz (letzte 30 Tage)",
+    "topProducts": "Top 10 Produkte"
+  },
+  "archive": {
+    "title": "Archiv",
+    "subtitle": "Archivierte Bestellungen",
+    "empty": "Keine archivierten Bestellungen",
+    "restore": "Wiederherstellen",
+    "archivedAt": "Archiviert am"
+  },
+  "toast": {
+    "newOrderCreated": "Neue Bestellung erstellt: {{code}}"
+  },
+  "notifications": {
+    "title": "Benachrichtigungen",
+    "empty": "Keine Benachrichtigungen",
+    "enable": "Browser-Benachrichtigungen aktivieren",
+    "disable": "Browser-Benachrichtigungen deaktivieren",
+    "permissionGranted": "Browser-Benachrichtigungen aktiviert",
+    "permissionDenied": "Benachrichtigungen abgelehnt",
+    "newOrderTitle": "Neue FLOW-Bestellung",
+    "newOrderBody": "{{code}} · {{name}} · {{total}}"
+  },
+  "settings": {
+    "title": "Einstellungen",
+    "subtitle": "System- und Regionskonfiguration",
+    "region": "Region",
+    "currency": "Währung",
+    "locale": "Gebietsschema",
+    "language": "Oberflächensprache",
+    "theme": "Thema",
+    "themeLight": "Hell",
+    "themeDark": "Dunkel",
+    "saveSuccess": "Einstellungen gespeichert"
+  },
+  "errors": {
+    "notFound": "Seite nicht gefunden",
+    "notFoundSubtitle": "Wir konnten nicht finden, wonach Sie suchen",
+    "goHome": "Zur Startseite",
+    "forbidden": "Bitte melden Sie sich an, um fortzufahren"
+  }
+}
