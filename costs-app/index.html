@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#0f172a" />
+<meta name="description" content="تطبيق تدوين وتخزين المصاريف التشغيلية والمرتبات لمحل الكهربائيات المنزلية" />
+<title>دفتر الحسابات — مصاريف ومرتبات المحل</title>
+<link rel="manifest" href="manifest.webmanifest" />
+<link rel="icon" href="icons/icon-192.png" type="image/png" />
+<link rel="apple-touch-icon" href="icons/icon-192.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="app-shell">
+
+  <!-- Top bar -->
+  <header class="topbar">
+    <div class="topbar-brand">
+      <span class="brand-icon" aria-hidden="true">⚡</span>
+      <div class="brand-text">
+        <strong id="shopNameLabel">دفتر الحسابات</strong>
+        <small>مصاريف ومرتبات المحل</small>
+      </div>
+    </div>
+    <div class="topbar-actions">
+      <label class="month-picker">
+        <span class="sr-only">الشهر</span>
+        <input type="month" id="monthPicker" />
+      </label>
+    </div>
+  </header>
+
+  <!-- Side / bottom nav -->
+  <nav class="tabbar" id="tabbar" aria-label="أقسام التطبيق">
+    <button class="tab" data-view="dashboard" aria-current="page">
+      <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/></svg>
+      <span>لوحة التحكم</span>
+    </button>
+    <button class="tab" data-view="expenses">
+      <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M20 6h-2.18A3 3 0 0 0 15 4H9a3 3 0 0 0-2.82 2H4a1 1 0 0 0 0 2h1v10a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8h1a1 1 0 0 0 0-2zM9 6h6a1 1 0 0 1 .92.61L15.5 8h-7l-.42-1.39A1 1 0 0 1 9 6z"/></svg>
+      <span>المصاريف</span>
+    </button>
+    <button class="tab" data-view="salaries">
+      <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 1a5 5 0 1 0 5 5 5 5 0 0 0-5-5zm0 8a3 3 0 1 1 3-3 3 3 0 0 1-3 3zm9 14v-1c0-3.31-4.03-6-9-6s-9 2.69-9 6v1h18z"/></svg>
+      <span>المرتبات</span>
+    </button>
+    <button class="tab" data-view="employees">
+      <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+      <span>الموظفون</span>
+    </button>
+    <button class="tab" data-view="settings">
+      <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M19.14 12.94a7.14 7.14 0 0 0 .06-.94 7.14 7.14 0 0 0-.06-.94l2.03-1.58a.5.5 0 0 0 .12-.64l-1.92-3.32a.5.5 0 0 0-.6-.22l-2.39.96a7.3 7.3 0 0 0-1.63-.94l-.36-2.54a.5.5 0 0 0-.5-.42h-3.84a.5.5 0 0 0-.5.42l-.36 2.54c-.59.24-1.13.56-1.63.94l-2.39-.96a.5.5 0 0 0-.6.22L2.65 8.84a.5.5 0 0 0 .12.64l2.03 1.58c-.04.3-.06.62-.06.94s.02.64.06.94l-2.03 1.58a.5.5 0 0 0-.12.64l1.92 3.32c.14.24.42.32.6.22l2.39-.96c.5.38 1.04.7 1.63.94l.36 2.54c.05.24.26.42.5.42h3.84c.24 0 .45-.18.5-.42l.36-2.54c.59-.24 1.13-.56 1.63-.94l2.39.96c.23.09.49 0 .6-.22l1.92-3.32a.5.5 0 0 0-.12-.64l-2.03-1.58zM12 15.5a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7z"/></svg>
+      <span>الإعدادات</span>
+    </button>
+  </nav>
+
+  <!-- Main content -->
+  <main class="content" id="content">
+
+    <!-- Dashboard -->
+    <section class="view" id="view-dashboard" data-view="dashboard">
+      <div class="kpi-grid" id="kpiGrid"></div>
+      <div class="panel">
+        <div class="panel-head">
+          <h2>المصاريف حسب التصنيف</h2>
+        </div>
+        <div id="categoryBreakdown" class="bars"></div>
+      </div>
+      <div class="panel">
+        <div class="panel-head">
+          <h2>آخر الحركات</h2>
+        </div>
+        <div id="recentActivity" class="tx-list"></div>
+      </div>
+    </section>
+
+    <!-- Expenses -->
+    <section class="view" id="view-expenses" data-view="expenses">
+      <div class="panel">
+        <div class="panel-head">
+          <h2>إضافة مصروف</h2>
+        </div>
+        <form id="expenseForm" class="grid-form">
+          <input type="hidden" id="expenseId" />
+          <label>التصنيف
+            <select id="expenseCategory" required></select>
+          </label>
+          <label>المبلغ
+            <input type="number" id="expenseAmount" min="0" step="0.01" placeholder="0.00" required />
+          </label>
+          <label>التاريخ
+            <input type="date" id="expenseDate" required />
+          </label>
+          <label>طريقة الدفع
+            <select id="expensePaymentMethod">
+              <option value="cash">نقداً</option>
+              <option value="bank">تحويل بنكي</option>
+              <option value="card">بطاقة</option>
+              <option value="other">أخرى</option>
+            </select>
+          </label>
+          <label class="span-2">ملاحظات
+            <input type="text" id="expenseNote" placeholder="وصف المصروف (اختياري)" />
+          </label>
+          <div class="form-actions span-2">
+            <button type="submit" class="btn btn-primary" id="expenseSubmitBtn">إضافة المصروف</button>
+            <button type="button" class="btn btn-ghost" id="expenseCancelEdit" hidden>إلغاء التعديل</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head">
+          <h2>سجل المصاريف</h2>
+          <div class="panel-tools">
+            <input type="search" id="expenseSearch" placeholder="بحث…" />
+            <select id="expenseCategoryFilter">
+              <option value="">كل التصنيفات</option>
+            </select>
+            <button class="btn btn-ghost" id="exportExpensesBtn">تصدير CSV</button>
+          </div>
+        </div>
+        <div id="expensesList" class="expense-list"></div>
+        <p class="empty-state" id="expensesEmptyState" hidden>لا توجد مصاريف مسجلة لهذا الشهر.</p>
+        <div class="table-footer">
+          الإجمالي: <strong id="expensesTotal">0.00</strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- Salaries -->
+    <section class="view" id="view-salaries" data-view="salaries">
+      <div class="panel">
+        <div class="panel-head">
+          <h2>مرتبات <span id="salaryMonthLabel"></span></h2>
+          <div class="panel-tools">
+            <button class="btn btn-ghost" id="exportSalariesBtn">تصدير CSV</button>
+          </div>
+        </div>
+        <div id="salariesList" class="salary-list"></div>
+        <p class="empty-state" id="salariesEmptyState" hidden>أضف موظفاً أولاً من تبويب "الموظفون".</p>
+        <div class="table-footer">
+          إجمالي المرتبات: <strong id="salariesTotal">0.00</strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- Employees -->
+    <section class="view" id="view-employees" data-view="employees">
+      <div class="panel">
+        <div class="panel-head">
+          <h2 id="employeeFormTitle">إضافة موظف</h2>
+        </div>
+        <form id="employeeForm" class="grid-form">
+          <input type="hidden" id="employeeId" />
+          <label>الاسم
+            <input type="text" id="employeeName" required />
+          </label>
+          <label>الوظيفة
+            <input type="text" id="employeeRole" placeholder="مثال: بائع، فني صيانة" />
+          </label>
+          <label>الراتب الأساسي
+            <input type="number" id="employeeSalary" min="0" step="0.01" required />
+          </label>
+          <label>رقم الهاتف
+            <input type="tel" id="employeePhone" placeholder="اختياري" />
+          </label>
+          <div class="form-actions span-2">
+            <button type="submit" class="btn btn-primary" id="employeeSubmitBtn">إضافة الموظف</button>
+            <button type="button" class="btn btn-ghost" id="employeeCancelEdit" hidden>إلغاء التعديل</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head"><h2>قائمة الموظفين</h2></div>
+        <div id="employeesList" class="card-list"></div>
+        <p class="empty-state" id="employeesEmptyState" hidden>لا يوجد موظفون بعد.</p>
+      </div>
+    </section>
+
+    <!-- Settings -->
+    <section class="view" id="view-settings" data-view="settings">
+      <div class="panel">
+        <div class="panel-head"><h2>إعدادات المحل</h2></div>
+        <form id="settingsForm" class="grid-form">
+          <label>اسم المحل
+            <input type="text" id="settingShopName" />
+          </label>
+          <label>رمز العملة
+            <input type="text" id="settingCurrency" maxlength="6" />
+          </label>
+          <div class="form-actions span-2">
+            <button type="submit" class="btn btn-primary">حفظ الإعدادات</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head"><h2>تصنيفات المصاريف</h2></div>
+        <form id="categoryForm" class="inline-form">
+          <input type="text" id="newCategoryName" placeholder="اسم تصنيف جديد" />
+          <button type="submit" class="btn btn-secondary">إضافة</button>
+        </form>
+        <div id="categoriesList" class="chip-list"></div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head"><h2>النسخ الاحتياطي للبيانات</h2></div>
+        <p class="hint">يتم حفظ جميع بياناتك محلياً على هذا الجهاز فقط. يُنصح بأخذ نسخة احتياطية دورياً.</p>
+        <div class="form-actions">
+          <button class="btn btn-secondary" id="exportBackupBtn">تنزيل نسخة احتياطية (JSON)</button>
+          <label class="btn btn-ghost file-btn">
+            استيراد نسخة احتياطية
+            <input type="file" id="importBackupInput" accept="application/json" hidden />
+          </label>
+          <button class="btn btn-danger" id="resetDataBtn">حذف جميع البيانات</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<div class="toast-host" id="toastHost" aria-live="polite"></div>
+
+<div class="confirm-dialog" id="confirmDialog" hidden>
+  <div class="confirm-box">
+    <p id="confirmMessage"></p>
+    <div class="form-actions">
+      <button class="btn btn-danger" id="confirmYes">تأكيد</button>
+      <button class="btn btn-ghost" id="confirmNo">إلغاء</button>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
