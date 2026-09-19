@@ -1,0 +1,28 @@
+{
+  "name": "دفتر الحسابات — مصاريف ومرتبات المحل",
+  "short_name": "دفتر الحسابات",
+  "description": "تطبيق تدوين وتخزين المصاريف التشغيلية والمرتبات لمحل الكهربائيات المنزلية، يعمل دون اتصال بالإنترنت.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f4f5f9",
+  "theme_color": "#0f172a",
+  "lang": "ar",
+  "dir": "rtl",
+  "categories": ["business", "finance", "productivity"],
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
